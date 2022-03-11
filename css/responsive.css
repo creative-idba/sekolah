@@ -1,0 +1,130 @@
+/* Tampilan ketika Inspesi */
+@media (max-width: 1228px) {
+  /* Navbar */
+  /* Atas */
+  .nav-top-left {
+    margin-left: 0;
+    font-size: 14px;
+    padding-left: 10px;
+  }
+  .nav-top-right {
+    right: 0;
+    margin: 0;
+    font-size: 14px;
+    padding-right: 10px;
+  }
+  /* Bawah */
+  .nav-bottom {
+    margin: 1% 1% 0 1%;
+  }
+  .nav-bottom-right ul {
+    margin: -1.8% -0.3% 0 0;
+  }
+  .nav-bottom-right ul a {
+    padding: 10px 5px 10px 5px;
+  }
+  /* Akhir Navbar */
+}
+
+/* Responsive Tablet */
+@media (max-width: 1080px) {
+  /* ALL */
+  /* ALL Akhir */
+  /* Navbar */
+  /* Atas */
+  .nav-top {
+    padding: 0 1.3% 0 1.3%;
+  }
+  .nav-top-right {
+    right: 1.3%;
+  }
+  /* Bawah */
+  .nav-bottom {
+    margin: 1.5% 3% 0 1.5%;
+  }
+  .nav-bottom-right ul {
+    top: 0;
+    width: 50%;
+    opacity: 0;
+    left: -100%;
+    height: 110vh;
+    display: block;
+    padding-top: 30px;
+    transition: all 1s;
+    transform: translateX(100%);
+    background-color: #00b395;
+    z-index: 2;
+  }
+  nav ul.slide {
+    opacity: 1;
+    left: -50.1%;
+  }
+  .nav-bottom-right ul a:hover {
+    color: #0ea08a;
+  }
+  .nav-bottom-right ul li {
+    color: #fff !important;
+    width: 100%;
+  }
+  .nav-bottom-right ul li .fa {
+    font-size: 13pt;
+    align-items: center;
+  }
+  .nav-bottom-right ul .cuy {
+    padding-bottom: 2px !important;
+    border-bottom: 1px solid black !important;
+  }
+  .slide-bottom {
+    position: relative !important;
+    top: 0;
+  }
+  .nav-bottom-right-list1,
+  .nav-bottom-right-list2,
+  .nav-bottom-right-list3,
+  .nav-bottom-right-list4,
+  .nav-bottom-right-list5 {
+    left: 0 !important;
+    color: #fff;
+    width: 34% !important;
+    background-color: #00b394;
+    z-index: 2;
+  }
+  .nav-profil:hover .nav-bottom-right-list1 {
+    display: block !important;
+    height: auto !important;
+  }
+  /* Menu */
+  .nav-menu {
+    opacity: 1 !important;
+  }
+  .menu-toggle {
+    display: flex;
+  }
+  .menu-toggle input {
+    display: flex;
+  }
+  /* Akhir Navbar */
+}
+
+/**** Size Mobile ****/
+@media screen and (max-width: 576px) {
+  /* Navbar */
+  /* top */
+  .nav-top-left {
+    font-size: 14px;
+    padding-left: 0;
+  }
+  .nav-top-right {
+    font-size: 14px;
+    padding-right: 0;
+  }
+  /* bottom */
+  .nav-bottom {
+    margin: 2.5% 1.5% 0 1.5%;
+  }
+  .nav-bottom .brending a h4,
+  .nav-bottom .brending a h4 {
+    font-size: 16px;
+  }
+  /* Akhir Navbar */
+}

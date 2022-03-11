@@ -1,0 +1,475 @@
+* {
+  padding: 0;
+  margin: 0%;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+/* Navbar */
+.nav-top {
+  width: 100%;
+  height: auto;
+  background-color: #00b394;
+  position: relative;
+}
+
+.nav-top-left {
+  margin-left: 6.5%;
+  color: #fff;
+  padding: 11px;
+  position: relative;
+}
+
+.nav-top-right {
+  top: 0;
+  right: 6.5%;
+  position: absolute;
+}
+
+.nav-top-right i {
+  color: #fff;
+  padding: 11.3px;
+  font-size: 100%;
+  cursor: pointer;
+}
+
+.nav-top-right i.fab:hover {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* Bawah */
+.nav-bottom {
+  width: 100%;
+  margin: 10px !important;
+}
+
+.nav-bottom .brending {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-bottom-left a {
+  color: #111;
+  display: flex;
+  width: 320px;
+  align-items: center;
+  text-decoration: none;
+}
+
+.nav-bottom-left a h4 {
+  color: #00b394;
+  font-size: 19px;
+}
+
+.nav-bottom-left img {
+  width: 27%;
+  margin-right: 3px;
+}
+
+.nav-bottom-right .cuy {
+  color: #111;
+  display: flex;
+  margin: 0;
+  cursor: text;
+  padding: 15px 5px !important;
+  align-items: center;
+  text-decoration: none;
+}
+.nav-bottom-right ul {
+  position: absolute;
+  right: 1.3%;
+  display: flex;
+  margin: -2% 4.5% 0 0;
+  align-items: center;
+}
+
+.nav-bottom-right ul li {
+  display: flex;
+  font-size: 17px;
+  list-style: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.nav-bottom-right ul li .fa {
+  margin-left: 4px;
+  font-size: 10pt;
+}
+
+.nav-bottom-right ul .cuy:hover {
+  color: #00b394;
+}
+
+.nav-bottom-right-list1,
+.nav-bottom-right-list2,
+.nav-bottom-right-list3,
+.nav-bottom-right-list4,
+.nav-bottom-right-list5 {
+  display: none !important;
+  top: 60px;
+  color: #fff;
+  width: 34% !important;
+  background-color: #00b394;
+  z-index: 2;
+}
+
+.nav-bottom-right-list1 {
+  left: 11%;
+}
+
+.nav-bottom-right-list2 {
+  left: 20%;
+}
+
+.nav-bottom-right-list3 {
+  left: 30%;
+}
+
+.nav-bottom-right-list4 {
+  left: 43.5%;
+}
+.nav-bottom-right-list5 {
+  left: 56%;
+}
+
+.nav-bottom-right ul ul {
+  padding: 5px 4px;
+  border-radius: 2px;
+}
+.nav-bottom-right ul .arrow {
+  position: absolute;
+  top: -20px;
+  left: 6%;
+  height: 0px;
+  width: 0px;
+  border: 10px solid transparent;
+  border-bottom: 12px solid #00b394;
+  z-index: 3;
+}
+.nav-bottom-right ul ul li {
+  padding: 5px 7px 2px;
+  width: 100%;
+  border-bottom: 2px solid #00937a;
+}
+.nav-bottom-right ul ul li:hover {
+  background-color: #018f78;
+}
+.nav-bottom-right ul ul li a {
+ font-size: 11.5pt;
+ width: 100%;
+}
+
+.nav-beranda {
+  color: #00937a;;
+}
+.nav-profil:hover .nav-bottom-right-list1 {
+  display: block !important;
+}
+.nav-data:hover .nav-bottom-right-list2 {
+  display: block !important;
+}
+.nav-informasi:hover .nav-bottom-right-list3 {
+  display: block !important;
+}
+.nav-mading:hover .nav-bottom-right-list4 {
+  display: block !important;
+}
+.nav-calon:hover .nav-bottom-right-list5 {
+  display: block !important;
+}
+
+
+/* Hamburger Menu */
+.nav-menu {
+  width: 50px;
+  height: 50px;
+  top: 9%;
+  right: 5%;
+  position: absolute;
+  background-color: #00b394;
+  opacity: 0;
+  transition: 0.2s;
+}
+
+.nav-menu:hover {
+  background-color: #038b75;
+}
+.menu-toggle {
+  width: 28px;
+  height: 20px;
+  margin: 15px 12px 15px 12px;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.menu-toggle input {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  left: 0;
+  top: 0;
+  opacity: 0;
+  cursor: pointer;
+  z-index: 2;
+  display: none;
+}
+
+.menu-toggle span {
+  display: block;
+  margin-top: 2px;
+  width: 28px;
+  height: 3px;
+  background-color: #fff;
+  border-radius: 3px;
+  transition: all 0.5s;
+}
+
+/* Hamburger Menu Animation */
+.menu-toggle span:nth-child(2) {
+  transform-origin: 0 0;
+}
+
+.menu-toggle span:nth-child(4) {
+  transform-origin: 0 100%;
+}
+
+.menu-toggle input:checked ~ span:nth-child(2) {
+  background-color: #fff;
+  transform: rotate(45deg) translate(2px, -6px);
+}
+
+.menu-toggle input:checked ~ span:nth-child(4) {
+  background-color: #fff;
+  transform: rotate(-45deg) translate(3px, 4px);
+}
+
+.menu-toggle input:checked ~ span:nth-child(3) {
+  transform: scale(0);
+}
+/*** Akhir Navbar ***/
+
+/*** Slider ***/
+.slider {
+  position: absolute;
+  width: 100%;
+  height: 75%;
+  background-color: #111;
+}
+
+.myslider {
+  background-color: #333;
+  height: 520px;
+  display: none;
+  overflow: hidden;
+}
+
+.prev,
+.next {
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  font-weight: bold;
+  font-size: 50px;
+  padding: 15px 20px 15px 20px;
+  cursor: pointer;
+  color: #fff;
+  transition: 0.1s;
+  user-select: none;
+}
+
+.prev:hover,
+.next:hover {
+  color: rgb(1, 255, 65);
+  background-color: rgba(1, 28, 7, 0.5);
+}
+
+.next {
+  right: 0;
+}
+
+.dotsbox {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  bottom: 20px;
+  padding: 5px;
+  border-radius: 5px;
+  background-color: rgba(17, 17, 17, 0.213);
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+.dotsbox:hover {
+  background-color: rgba(17, 17, 17, 0.419);
+}
+
+.dot {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  border: 3px solid #fff;
+  border-radius: 50%;
+  margin: 0 10px;
+  cursor: pointer;
+}
+
+.active {
+  border-color: rgba(3, 255, 66, 0.994);
+}
+
+.dot:hover {
+  border-color: rgba(3, 255, 66, 0.282);
+}
+
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {
+    opacity: 0.8;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fade {
+  from {
+    opacity: 0.8;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.slider .text {
+  position: absolute;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.5);
+  top: 20%;
+  left: 15%;
+  padding: 40px;
+  border-radius: 5px;
+  margin: 190px 0 0 -90px;
+  z-index: 1;
+}
+.slider .text h1 {
+  font-size: 32px;
+  color: #fff;
+  margin-bottom: 8px;
+}
+
+.slider .text p {
+  font-size: 16px;
+  letter-spacing: 0.8px;
+  line-height: 23px;
+}
+/*** Akhir Slider ***/
+
+
+/*** Unit Pendidikan ***/
+.unitPendidikan {
+  display: block;
+  justify-content: center;
+  align-items: center;
+  margin-top: 475px;
+  position: relative;
+  text-align: center;
+}
+.unitPendidikan .title {
+  color: #fff;
+  margin: 0 auto;
+  font-size: 14pt;
+  width: max-content;
+  padding: 15px 30px;
+  border-radius: 5%;
+  background-color: #cc444d;
+}
+.unitPendidikan .unit {
+  color: #fff;
+  display: flex;
+  margin-bottom: 40px;
+  font-size: 15pt;
+  font-weight: bold;
+  justify-content: center;
+}
+.unitPendidikan .unit .c {
+  width: 100%;
+  padding: 20px 0;
+  height: max-content;
+  transition: margin 0.3s;
+}
+.unitPendidikan .unit .c a {
+  color: #fff;
+  padding: 0 10px;
+  cursor: pointer;
+  text-decoration: none;
+}
+.unitPendidikan .unit .c img {
+  transition: margin 0.5s;
+}
+.unitPendidikan .unit .c:hover {
+  margin-top: -10px;
+}
+.unitPendidikan .unit a:hover img {
+  margin-bottom: 10px;
+  margin-top: -10px;
+}
+.unitPendidikan .rasb,
+.unitPendidikan .smpsb,
+.unitPendidikan .smksb {
+  background-color: #00B394;
+}
+.unitPendidikan .misb,
+.unitPendidikan .masb {
+  background-color: #018871;
+}
+/*** Akhir Unit Pendidikan ***/
+/*** Penerimaan ***/
+.penerimaan {
+  width: 100%;
+  display: flex;
+  padding: 50px 0;
+  justify-content: center;
+  background-color: #00B394;
+}
+.penerimaan img {
+  width: 450px;
+  padding-right: 30px;
+}
+.penerimaan .text {
+  width: max-content;
+  color: #fff;
+  line-height: 50px;
+}
+.penerimaan .text a {
+  width: 100%;
+  position: absolute;
+  text-decoration: none;
+}
+.penerimaan .text a p {
+  width: 150px;
+  padding: 0 12px;
+  color: #00B394;
+  transition: 0.2s;
+  text-align: center;
+  background-color: #fff;
+}
+.penerimaan .text a p:hover {
+  transform: scale(0.95);
+  color: #fff;
+  background-color: transparent;
+  border: 2px solid #fff;
+}
+/*** Akhir Penerimaan ***/
+
+
